@@ -16,7 +16,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
-    "types": ["node"], // Solo 'node' aquí
+    "types": ["vite/client", "@types/node"],
     "baseUrl": "src",
     "paths": {
       "@/*": ["*"]
