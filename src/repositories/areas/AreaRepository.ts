@@ -80,6 +80,7 @@ export class AreaRepository implements IAreaRepository {
 
             area.image.forEach((file, index) => {
                 if (file instanceof File) {
+                    console.log(index)
                     formData.append(`image`, file);
                 }
             });
@@ -117,6 +118,7 @@ export class AreaRepository implements IAreaRepository {
 
             area.image.forEach((file, index) => {
                 if (file instanceof File) {
+                    console.log(index)
                     formData.append(`image`, file);
                 }
             });

@@ -11,6 +11,7 @@ const Notifications = () => {
   const { socket } = useWebSocket();
   const [notification, setNotification] = useState<Notification | null>(null);
   const [history, setHistory] = useState<Notification[]>([]);
+  console.log(history)
 
   useEffect(() => {
     if (!socket) return;

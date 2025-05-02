@@ -67,7 +67,7 @@ const TicketPie: React.FC<TicketPieProps> = ({ ticketData }) => {
     );
 };
 
-const LoanPie: React.FC<LoanPieProps> = ({ loanData }) => {
+const LoanPie: React.FC<LoanPieProps> = ({}) => {
     const data = {
         labels: ["Activos", "Completados"],
         datasets: [

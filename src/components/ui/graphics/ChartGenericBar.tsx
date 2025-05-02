@@ -85,12 +85,12 @@ const TicketsByAreaBar: React.FC<TicketsByAreaProps> = ({ ticketData }) => {
     );
 };
 
-const SubnetsBar: React.FC<SubnetsProps> = ({ subnetData }) => {
-    const labels = subnetData.map((subnet) => `vlan ${subnet.vlan}`);
-    const usedPorts = subnetData.map((subnet) => subnet.used_ports);
-    const availablePorts = subnetData.map(
-        (subnet) => subnet.number_of_ips - subnet.used_ports
-    );
+const SubnetsBar: React.FC<SubnetsProps> = ({ }) => {
+    // const labels = subnetData.map((subnet) => `vlan ${subnet.vlan}`);
+    // const usedPorts = subnetData.map((subnet) => subnet.used_ports);
+    // const availablePorts = subnetData.map(
+    //     (subnet) => subnet.number_of_ips - subnet.used_ports
+    // );
 
     const data = {
         labels: ["vlan 10", "vlan 20", "vlan 30"],

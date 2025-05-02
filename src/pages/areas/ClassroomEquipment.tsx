@@ -27,6 +27,8 @@ const ClassroomEquipment: React.FC = () => {
     const [showRecords, setShowRecords] = useState<string>("50");
     const recordsPerPage = parseInt(showRecords);
 
+    
+
     useEffect(() => {
         const fetchEquipment = async () => {
           if (!id) return;
@@ -41,6 +43,7 @@ const ClassroomEquipment: React.FC = () => {
             setEquipments(equipmentData);
           } catch (error) {
             console.log("Error al obtener el área:", error);
+            console.log(loading, errorMessage, setsuccessMessage, setSearch, setShowRecords); //Chk
             setErrorMessage(`Error al obtener el área: ${error}`);
             setTimeout(() => navigate("/auth/area"), 1500);
           } finally {
