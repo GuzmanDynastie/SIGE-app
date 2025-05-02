@@ -28,10 +28,18 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     port: 5173,
-    strictPort: true
+    strictPort: true,
+    allowedHosts: [
+      'sige-app.onrender.com',
+      'localhost' // Opcional: para desarrollo local
+    ]
   },
   preview: {
-    port: 5173
+    port: 5173,
+    host: '0.0.0.0',
+    allowedHosts: [
+      'sige-app.onrender.com'
+    ]
   }
 })
 
