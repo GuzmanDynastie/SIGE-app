@@ -6,6 +6,6 @@ export interface Subnet {
     getway: string;
     description: string;
     number_of_ips: number;
-    used_ports: number;
+    used_ports?: number;
   }
   

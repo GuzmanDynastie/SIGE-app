@@ -1,6 +1,6 @@
 import { IAreaRepository } from "./IAreaRepository";
 import { Area } from "../../types/Area";
-import { EquipmentArea } from "../../types/Equipment";
+import { Equipment } from "../../types/Equipment";
 
 const API_URL = import.meta.env.VITE_API_AREA;
 
@@ -43,7 +43,7 @@ export class AreaRepository implements IAreaRepository {
         }
     }
 
-    async getEquipmentAreaById(id: number): Promise<EquipmentArea[]> {
+    async getEquipmentAreaById(id: number): Promise<Equipment[]> {
         try {
             const token = localStorage.getItem('token');
             const response = await fetch(`${API_URL}/equipment/${id}`, {

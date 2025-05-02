@@ -159,7 +159,7 @@ const Users: React.FC = () => {
                         </div>
 
                         <div className={styles[`button-ticketss`]}>
-                            <Button text="Agregar Usuario" variant="info" size="md" onClick={() => navigate("/auth/users/create")} />
+                            <Button text="Agregar Usuario" variant="secondary active" size="md" onClick={() => navigate("/auth/users/create")} />
                         </div>
                     </div>
 

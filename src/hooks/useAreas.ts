@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Area } from "../types/Area";
 import { AreaRepository } from "../repositories/areas/AreaRepository";
-import { EquipmentArea } from "../types/Equipment";
+import { Equipment } from "../types/Equipment";
 
 const areaRepository = new AreaRepository();
 
@@ -10,7 +10,7 @@ export function useAreas() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [selectedArea, setSelectedArea] = useState<Area | null>(null);
-    const [selectedEquipmentArea, setEquipmentSelectedArea] = useState<EquipmentArea[]>([]);
+    const [selectedEquipmentArea, setEquipmentSelectedArea] = useState<Equipment[]>([]);
 
 
     async function getAllAreas() {
@@ -41,7 +41,7 @@ export function useAreas() {
         }
     }
 
-    async function getEquipmentAreaById(id: number): Promise<EquipmentArea []| null> {
+    async function getEquipmentAreaById(id: number): Promise<Equipment []| null> {
         setLoading(true);
         setError(null);
         try {

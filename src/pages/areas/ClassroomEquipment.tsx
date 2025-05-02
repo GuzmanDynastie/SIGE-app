@@ -5,7 +5,7 @@ import Alert from "../../components/Alert";
 import Pagination from "../../components/Pagination";
 import { exportToPDF, exportToExcel } from "../../utils/exportUtils";
 import { useEffect, useState } from "react";
-import { EquipmentArea } from "../../types/Equipment";
+import { Equipment } from "../../types/Equipment";
 import { useAreas } from "../../hooks/useAreas";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -14,7 +14,7 @@ const ClassroomEquipment: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const { getEquipmentAreaById } = useAreas();
 
-    const [equipments, setEquipments] = useState<EquipmentArea[]>([]);
+    const [equipments, setEquipments] = useState<Equipment[]>([]);
     const [selectedEquipments, setSelectedEquipments] = useState<number[]>([]);
     const [selectAll, setSelectAll] = useState(false);
     const [selectPage, setSelectPage] = useState(false);
@@ -82,7 +82,7 @@ const ClassroomEquipment: React.FC = () => {
         setSelectAll(!selectAll);
     };
 
-    const createEquipmentArray = (equipment: EquipmentArea[]) => {
+    const createEquipmentArray = (equipment: Equipment[]) => {
         return equipment.map(equip => ({
             id_state: equip.id_state,
             full_name: equip.full_name,
@@ -107,7 +107,7 @@ const ClassroomEquipment: React.FC = () => {
 
     // Table columns
     const columns: {
-        key: keyof (EquipmentArea & { checkbox: JSX.Element });
+        key: keyof (Equipment & { checkbox: JSX.Element });
         label: string | JSX.Element
     }[] = [
             {
